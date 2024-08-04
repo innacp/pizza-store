@@ -1,0 +1,51 @@
+const ingredients = [
+  {
+    id: 1,
+    name: "Cheese Peezy",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 2,
+    name: "Tomato",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 3,
+    name: "Pepperoni Macaroni",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 4,
+    name: "Red Hot Chili Peppers",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 5,
+    name: "Magic Shrooms",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 6,
+    name: "Onion Kiss",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 7,
+    name: "Pineapple Freak",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+];
