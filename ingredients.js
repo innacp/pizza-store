@@ -8,7 +8,7 @@ const ingredients = [
   },
   {
     id: 2,
-    name: "Tomato",
+    name: "Mr. Tomato",
     image: "",
     price: 5,
     selected: false,
@@ -44,6 +44,13 @@ const ingredients = [
   {
     id: 7,
     name: "Pineapple Freak",
+    image: "",
+    price: 5,
+    selected: false,
+  },
+  {
+    id: 8,
+    name: "Chick",
     image: "",
     price: 5,
     selected: false,

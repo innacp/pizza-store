@@ -1,9 +1,12 @@
+const pizza = {};
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".ingredients-container");
 
   ingredients.forEach((ingredient) => {
-    const ingredientList = document.createElement("li");
-    ingredientList.classList.add("ingredient");
+    const ingredientItem = document.createElement("li");
+    ingredientItem.classList.add("ingredient");
+    ingredientItem.setAttribute("data-id", ingredient.id);
 
     const name = document.createElement("h4");
     name.textContent = ingredient.name;
@@ -15,17 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const price = document.createElement("p");
     price.textContent = ingredient.price;
 
-    ingredientList.appendChild(name);
-    ingredientList.appendChild(image);
-    ingredientList.appendChild(price);
+    ingredientItem.appendChild(name);
+    ingredientItem.appendChild(image);
+    ingredientItem.appendChild(price);
 
-    container.appendChild(ingredientList);
+    container.appendChild(ingredientItem);
   });
 });
-
-const pizza = {};
-
-console.log(ingredients);
 
 // const order = {
 //     pizza
