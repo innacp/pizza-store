@@ -8,9 +8,51 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
-/* .wrapper {
-
-} */
-.header {
-    display: flex;
+.wrapper {
+    padding: 20px
 }
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.order-container {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.ingredients-container {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ingredient-box {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.base-img { 
+    width: 200px;
+}
+
+.ingredient-img {
+    width: 60px;
+}
+
