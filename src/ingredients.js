@@ -3,7 +3,7 @@ const ingredients = [
     id: 1,
     name: "Cheese Peezy",
     image: "./img/cheese.png",
-    price: 5,
+    price: 7,
     selected: false,
   },
   {
@@ -17,7 +17,7 @@ const ingredients = [
     id: 3,
     name: "Pepperoni Macaroni",
     image: "./img/salami.png",
-    price: 5,
+    price: 7,
     selected: false,
   },
   {
@@ -31,7 +31,7 @@ const ingredients = [
     id: 5,
     name: "Magic Shrooms",
     image: "./img/mushroom.png",
-    price: 5,
+    price: 6,
     selected: false,
   },
   {
@@ -45,14 +45,14 @@ const ingredients = [
     id: 7,
     name: "Pineapple Freak",
     image: "./img/pinia.png",
-    price: 5,
+    price: 6,
     selected: false,
   },
   {
     id: 8,
     name: "Chick",
     image: "./img/chicken.png",
-    price: 5,
+    price: 7,
     selected: false,
   },
 ];

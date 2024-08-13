@@ -9,9 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="src/ingredients.js"></script>
-    <script defer src="src/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -28,55 +26,19 @@
         </header>
         <main class="main-container">
             <div class="order-container">
-                <h3>Your pizza</h3>
+                <h3 class="mid-heading">Your pizza</h3>
                 <img class="base-img" src="./img/base.png" alt="pizza-image">
             </div>
-            <ul class="ingredients-container">
-                <h3>Ingredients</h3>
-                <li id="1" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="2" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="3" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="4" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="5" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="6" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="7" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="8" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
+            <h3 class="mid-heading">Ingredients</h3>
 
-            </ul>
+
+            <ul id="ingredients" class="ingredients-container border"></ul>
+
         </main>
     </div>
+
+    <script defer src="src/ingredients.js"></script>
+    <script defer src="src/app.js"></script>
 </body>
 
 </html>

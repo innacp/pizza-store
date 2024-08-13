@@ -1,3 +1,9 @@
+:root {
+    --color-dark: #dd13fc; 
+    --color-light: #fdbdff;
+    --color-mid: #fde3fd;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +14,9 @@ body {
     font-family: "Roboto Mono", monospace;
 }
 
+h1 {
+    color: var(--color-dark);
+}
 .wrapper {
     padding: 20px
 }
@@ -15,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     margin-bottom: 20px;
 }
 
@@ -25,16 +35,33 @@ body {
 }
 
 .order-container {
-    border: 1px solid black;
-    padding: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 0; */
+    display: table;
+    border: 3px solid var(--color-dark);
+    
+
 }
 
 .ingredients-container {
-    border: 1px solid black;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.border {
+    border: 3px solid var(--color-dark);    
+}
+
+.mid-heading {
+    color: var(--color-dark);
+    text-align: center;
+    /* border: 3px solid var(--color-dark); */
+    flex: 1 1 30%;
 }
 
 .ingredient-box {
@@ -42,6 +69,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    border: 1px solid var(--color-dark);
+    padding: 10px;
 }
 
 .logo {
@@ -54,5 +83,9 @@ body {
 
 .ingredient-img {
     width: 60px;
+}
+
+.ingredient-name {
+    color: var(--color-dark);
 }
 
