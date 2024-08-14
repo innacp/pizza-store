@@ -1,7 +1,7 @@
 const ingredients = [
   {
     id: 1,
-    name: "Cheese Peezy",
+    name: "Cheesee Peezy",
     image: "./img/cheese.png",
     price: 7,
     selected: false,

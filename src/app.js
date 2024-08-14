@@ -14,10 +14,22 @@ function renderIngredients() {
       <h4 class="ingredient-name">${ingredient.name}</h4>
       <img class="ingredient-img" src="${ingredient.image}">
       <p class="price">${ingredient.price}</p>
+      <button class="add-btn">+</button>
+      <button class="remove-btn">-</button>
     `;
 
     ingredientsList.innerHTML += listItem.outerHTML; //плюсік щоб не перезаписувати попередній елемент
     //outerHTML щоб не брати лістайтем як жс обєкт а як штмл
+
+    // const pizzaList = document.getElementById("pizza");
+    // const pizzaItem = document.createElement("li");
+    // pizzaItem.classList.add("pizza-item");
+    // pizzaItem.innerHTML = `
+    //   <h4 class="ingredient-name">${ingredient.name}</h4>
+    //   <img class="ingredient-img" src="${ingredient.image}">
+    // `;
+
+    // pizzaList.innerHTML += pizzaItem.outerHTML;
   });
 }
 
@@ -41,6 +53,19 @@ function addIngredient(ingredientId) {
     ingredient.selected = true;
     userPizza.push(ingredient);
     console.log("Ingredient added!");
+    console.log(ingredient.name);
+  }
+
+  if (ingredient.selected) {
+    const pizzaList = document.getElementById("pizza");
+    const pizzaItem = document.createElement("li");
+    pizzaItem.classList.add("pizza-item");
+    pizzaItem.innerHTML = `
+      <h4 class="ingredient-name">${ingredient.name}</h4>
+      <img class="ingredient-img" src="${ingredient.image}">
+    `;
+
+    pizzaList.innerHTML += pizzaItem.outerHTML;
   }
 }
 
