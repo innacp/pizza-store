@@ -13,7 +13,7 @@ function renderIngredients() {
     listItem.innerHTML = `
       <h4 class="ingredient-name">${ingredient.name}</h4>
       <img class="ingredient-img" src="${ingredient.image}">
-      <p class="price">${ingredient.price}</p>
+      <p class="price">${"$" + ingredient.price}</p>
       <button class="add-btn">+</button>
       <button class="remove-btn">-</button>
     `;
@@ -59,6 +59,7 @@ function addIngredient(ingredientId) {
   if (ingredient.selected) {
     const pizzaList = document.getElementById("pizza");
     const pizzaItem = document.createElement("li");
+
     pizzaItem.classList.add("pizza-item");
     pizzaItem.innerHTML = `
       <h4 class="ingredient-name">${ingredient.name}</h4>
