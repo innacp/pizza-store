@@ -1,5 +1,3 @@
-let userPizza = [];
-
 function renderIngredients() {
   const ingredientsList = document.getElementById("ingredients");
 
@@ -7,40 +5,24 @@ function renderIngredients() {
     const listItem = document.createElement("li");
     listItem.classList.add("ingredient-box");
 
-    // na vsyakyi pojarnyi vzyaly idshku
     listItem.id = ingredient.id;
 
-    listItem.innerHTML = `
-      <h4 class="ingredient-name">${ingredient.name}</h4>
-      <img class="ingredient-img" src="${ingredient.image}">
-      <p class="price">${"$" + ingredient.price}</p>
-      <button class="add-btn">+</button>
-      <button class="remove-btn">-</button>
-    `;
+    listItem.innerHTML = buildIngredientHtml(ingredient, true);
 
-    ingredientsList.innerHTML += listItem.outerHTML; //плюсік щоб не перезаписувати попередній елемент
-    //outerHTML щоб не брати лістайтем як жс обєкт а як штмл
-
-    // const pizzaList = document.getElementById("pizza");
-    // const pizzaItem = document.createElement("li");
-    // pizzaItem.classList.add("pizza-item");
-    // pizzaItem.innerHTML = `
-    //   <h4 class="ingredient-name">${ingredient.name}</h4>
-    //   <img class="ingredient-img" src="${ingredient.image}">
-    // `;
-
-    // pizzaList.innerHTML += pizzaItem.outerHTML;
+    ingredientsList.innerHTML += listItem.outerHTML;
   });
 }
 
-function setupClickEventHandlers() {
+function setupAddIngredientEvents() {
   // HTMLCollection type
-  const ingredients = document.getElementsByClassName("ingredient-box");
+  const buttons = document.getElementsByClassName("add-btn");
 
   // spread feature for representation html collection into array type
-  [...ingredients].forEach((item) => {
-    item.addEventListener("click", (e) => {
-      addIngredient(parseInt(item.id));
+  [...buttons].forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const button = event.target;
+      const ingredientId = button.attributes["data-ingredient-id"].value;
+      addIngredient(parseInt(ingredientId));
     });
   });
 }
@@ -51,30 +33,71 @@ function addIngredient(ingredientId) {
   );
   if (ingredient) {
     ingredient.selected = true;
-    userPizza.push(ingredient);
-    console.log("Ingredient added!");
-    console.log(ingredient.name);
+  }
+  renderSelectedIngredients();
+}
+
+function renderSelectedIngredients() {
+  const pizzaList = document.getElementById("pizza");
+  // clear innerHtml with previous items
+  pizzaList.innerHTML = "";
+
+  ingredients
+    .filter((ingredient) => ingredient.selected)
+    .forEach((ingredient) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("ingredient-box");
+
+      listItem.id = ingredient.id;
+
+      listItem.innerHTML = buildIngredientHtml(ingredient, false);
+
+      pizzaList.innerHTML += listItem.outerHTML;
+    });
+  setupRemoveIngredientEvents();
+}
+
+function removeIngredient(ingredientId) {
+  const ingredient = ingredients.find(
+    (ingredient) => ingredient.id === ingredientId && ingredient.selected
+  );
+  if (ingredient) {
+    ingredient.selected = false;
   }
 
-  if (ingredient.selected) {
-    const pizzaList = document.getElementById("pizza");
-    const pizzaItem = document.createElement("li");
+  renderSelectedIngredients();
+}
 
-    pizzaItem.classList.add("pizza-item");
-    pizzaItem.innerHTML = `
+function setupRemoveIngredientEvents() {
+  const buttons = document.getElementsByClassName("remove-btn");
+  console.log(buttons);
+
+  [...buttons].forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const button = event.target;
+      const ingredientId = button.attributes["data-ingredient-id"].value;
+      removeIngredient(parseInt(ingredientId));
+    });
+  });
+}
+
+// addOrRemove: true = Add, false = remove
+function buildIngredientHtml(ingredient, addOrRemove) {
+  return `
       <h4 class="ingredient-name">${ingredient.name}</h4>
       <img class="ingredient-img" src="${ingredient.image}">
+      <p class="price">${"$" + ingredient.price}</p>
+        <div class="btn-container">
+          <button data-ingredient-id="${ingredient.id}" class="${
+    addOrRemove ? "add-btn" : "remove-btn"
+  }">${addOrRemove ? "+" : "-"}</button>
+        </div>
     `;
-
-    pizzaList.innerHTML += pizzaItem.outerHTML;
-  }
 }
 
 renderIngredients();
-setupClickEventHandlers();
+setupAddIngredientEvents();
 
-console.log(userPizza);
-
-//вивести додані інгредієнти в піца контейнер +
-//додати кнопки плюс мінус на інгрелдієнти
-//додати рімув функцію на інгредієнт справа
+//saveOrder
+//взяти селектед хавка айтеми і запихнути в ерейчик order і цей ерейчик засунути в локалсторедж
+//в ордер хісторі рендеримо список ордерів (ерей з ереїв)
