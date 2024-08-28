@@ -7,7 +7,7 @@ function renderIngredients() {
 
     listItem.id = ingredient.id;
 
-    listItem.innerHTML = buildIngredientHtml(ingredient, true);
+    listItem.innerHTML = buildIngredientHtml(ingredient);
 
     ingredientsList.innerHTML += listItem.outerHTML;
   });
@@ -17,7 +17,6 @@ function setupAddIngredientEvents() {
   // HTMLCollection type
   const buttons = document.getElementsByClassName("add-btn");
 
-  // spread feature for representation html collection into array type
   [...buttons].forEach((item) => {
     item.addEventListener("click", (event) => {
       const button = event.target;
@@ -57,7 +56,8 @@ function renderSelectedIngredients() {
   setupRemoveIngredientEvents();
 }
 
-function removeIngredient(ingredientId) {
+function removeIngredient() {
+  // [1, 2, true, {hello: 'privet'}]
   const ingredient = ingredients.find(
     (ingredient) => ingredient.id === ingredientId && ingredient.selected
   );
@@ -82,7 +82,8 @@ function setupRemoveIngredientEvents() {
 }
 
 // addOrRemove: true = Add, false = remove
-function buildIngredientHtml(ingredient, addOrRemove) {
+function buildIngredientHtml(ingredient, addOrRemove = true) {
+  //explain addOrRemove
   return `
       <h4 class="ingredient-name">${ingredient.name}</h4>
       <img class="ingredient-img" src="${ingredient.image}">
@@ -98,6 +99,51 @@ function buildIngredientHtml(ingredient, addOrRemove) {
 renderIngredients();
 setupAddIngredientEvents();
 
-//saveOrder
-//взяти селектед хавка айтеми і запихнути в ерейчик order і цей ерейчик засунути в локалсторедж
-//в ордер хісторі рендеримо список ордерів (ерей з ереїв)
+function saveOrder() {
+  let savedOrders = JSON.parse(localStorage.getItem("orders"));
+
+  const newOrder = {
+    id: new Date().getTime().toString(36),
+    pizza: [...ingredients.filter((i) => i.selected)],
+  };
+
+  const totalPrice = newOrder.pizza.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price,
+    0
+  );
+
+  newOrder.price = totalPrice;
+
+  console.log(totalPrice);
+
+  savedOrders = savedOrders
+    ? [...savedOrders, { ...newOrder }]
+    : [{ ...newOrder }];
+
+  localStorage.setItem("orders", JSON.stringify(savedOrders));
+
+  window.location.href = "order.html";
+}
+
+function renderOrder() {
+  const order = localStorage.getItem("orders");
+}
+
+renderSelectedIngredients();
+
+//спред почитати попробувати +
+
+//переродити ню ордер на таку структуру: +
+
+// const order {
+//   id: number,
+//   price: number,
+//   pizza: {
+//     ingredients,
+//   }
+// }
+
+//orderHistory
+//порахувати ціну піци і додати її в рендер
+//взяти ордерс з локал стореджа і відрендерити штмл
+//додати ріпіт ордер
