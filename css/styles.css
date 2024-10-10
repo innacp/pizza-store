@@ -86,7 +86,6 @@ h1 {
     border-right: none;
     border-left: none;
     background-color: var(--color-light);
-
 }
 
 .logo {
@@ -143,4 +142,6 @@ button {
     color: var(--color-light);
     font-weight: 600;
 }
+
+
 

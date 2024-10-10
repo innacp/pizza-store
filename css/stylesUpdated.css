@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper {
+    background-color: #FFECEC;
+    padding: 0 30px;
+}
+
+.header { 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.logo-image {
+    width: 124px;
+    height: 123px;
+}
+
+.logo-text {
+    color: #FC6051;
+    font-size: 40px;
+}
+
+.history-icon {
+    width: 30px;
+    height:30px;
+}
+
+.basket-icon {
+    width: 39px;
+    height:41px;
+}
+
+.main-container {
+
+}
+
+.cta-text {
+    font-size: 120px;
+    font-weight: bold;
+    color: #1F2229; 
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero-section {
+    position: absolute;
+    background-color: #FFECEC;
+}
+.cta-button {
+    font-family: "Roboto Mono", monospace;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 36px;
+    background-color: #FC6051;
+    border: 4px solid #042976;
+    width: 361px;
+    height: 95px;
+}
+
+.hero-pizza {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 800px;
+    height: 800px;
+}

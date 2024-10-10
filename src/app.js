@@ -7,7 +7,7 @@ function renderIngredients() {
 
     listItem.id = ingredient.id;
 
-    listItem.innerHTML = buildIngredientHtml(ingredient);
+    listItem.innerHTML = buildIngredientHtml(ingredient); //не завжди шарю коли треба передавати аргументи при викрику
 
     ingredientsList.innerHTML += listItem.outerHTML;
   });
@@ -70,7 +70,6 @@ function removeIngredient() {
 
 function setupRemoveIngredientEvents() {
   const buttons = document.getElementsByClassName("remove-btn");
-  console.log(buttons);
 
   [...buttons].forEach((item) => {
     item.addEventListener("click", (event) => {
@@ -114,10 +113,8 @@ function saveOrder() {
 
   newOrder.price = totalPrice;
 
-  console.log(totalPrice);
-
   savedOrders = savedOrders
-    ? [...savedOrders, { ...newOrder }]
+    ? [...savedOrders, { ...newOrder }] //shallow copy
     : [{ ...newOrder }];
 
   localStorage.setItem("orders", JSON.stringify(savedOrders));
@@ -125,15 +122,7 @@ function saveOrder() {
   window.location.href = "order.html";
 }
 
-function renderOrder() {
-  const order = localStorage.getItem("orders");
-}
-
 renderSelectedIngredients();
-
-//спред почитати попробувати +
-
-//переродити ню ордер на таку структуру: +
 
 // const order {
 //   id: number,
@@ -142,8 +131,3 @@ renderSelectedIngredients();
 //     ingredients,
 //   }
 // }
-
-//orderHistory
-//порахувати ціну піци і додати її в рендер
-//взяти ордерс з локал стореджа і відрендерити штмл
-//додати ріпіт ордер

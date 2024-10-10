@@ -9,34 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesUpdated.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header-container">
+        <header class="header">
             <div class="logo-container">
-                <img class="logo" src="./img/logo.png" alt="pizza-logo">
+                <h2 class="logo-text">Pingo</h2>
+                <img class="logo-image" src="./img/logo.png" alt="pizza-logo">
+                <h2 class="logo-text">Rinjo</h2>
             </div>
-            <div class="history-container">
-                <h2 class="history-heading">Order Histiry</h2>
+            <div class="nav-icons">
+                <img class="history-icon" src="./img/history-icon.png" alt="">
+                <img class="basket-icon" src="./img/basket-icon.png" alt="">
             </div>
-            <h1>Hey, Pizza Lover!</h1>
         </header>
         <main class="main-container">
-            <div class="order-container">
-                <h3 class="mid-heading">Your pizza</h3>
+            <div class="hero-section">
+                <div class="cta-container">
+                    <h1 class="cta-text">Create<br>your own<br>pizza</h1>
+                    <button class="cta-button">start building</button>
+                </div>
+                <img class="hero-pizza" src="/img/hero-pizza.png" alt="delicious-pizza-image">
+            </div>
+            <!-- <div class="menu-container">
                 <div class="base-img-container">
                     <img class="base-img" src="./img/base.png" alt="pizza-image">
                 </div>
-                <ul id="pizza" class="pizza-container"></ul>
-                <button onclick="saveOrder()">Save Order</button>
-            </div>
-            <div class="menu-container">
-                <h3 class="mid-heading">Ingredients</h3>
-                <ul id="ingredients" class="ingredients-container"></ul>
-            </div>
-        </main>
+                <ul id="pizza" class="pizza-container"></ul> -->
+            <!-- <button onclick="saveOrder()">Save Order</button>
+            <h3 class="mid-heading">Ingredients</h3>
+            <ul id="ingredients" class="ingredients-container"></ul> -->
+    </div>
+    </main>
     </div>
 
     <script defer src="src/ingredients.js"></script>
