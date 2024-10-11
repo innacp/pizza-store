@@ -150,3 +150,13 @@ img {
     cursor: pointer;
     color: #FFECEC;
 }
+
+.builder-section {
+    background-image: url('../img/builder-bkg.jpg');
+    background-size: cover;
+    min-height: 500px;
+}
+
+.ingredients-container {
+    list-style-type: none;
+}

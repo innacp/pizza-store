@@ -84,14 +84,16 @@ function setupRemoveIngredientEvents() {
 function buildIngredientHtml(ingredient, addOrRemove = true) {
   //explain addOrRemove
   return `
-      <h4 class="ingredient-name">${ingredient.name}</h4>
-      <img class="ingredient-img" src="${ingredient.image}">
-      <p class="price">${"$" + ingredient.price}</p>
+      <!-- <h4 class="ingredient-name">${ingredient.name}</h4> -->
+      <button class="ingredient-button">
+        <img class="ingredient-img" src="${ingredient.image}">
+      </button>
+      <!-- <p class="price">${"$" + ingredient.price}</p>
         <div class="btn-container">
           <button data-ingredient-id="${ingredient.id}" class="${
     addOrRemove ? "add-btn" : "remove-btn"
   }">${addOrRemove ? "+" : "-"}</button>
-        </div>
+        </div> -->
     `;
 }
 
