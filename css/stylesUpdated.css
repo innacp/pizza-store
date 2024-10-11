@@ -15,7 +15,7 @@ img {
 
 .wrapper {
     background-color: #FFECEC;
-    padding: 0 30px;
+    padding: 0 60px;
 }
 
 .header { 
@@ -23,6 +23,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 115px;
 }
 
 .nav-icons {
@@ -30,7 +31,7 @@ img {
     right: 0;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .logo-container {
@@ -52,29 +53,45 @@ img {
 .history-icon {
     width: 30px;
     height:30px;
+    cursor: pointer;
 }
 
 .basket-icon {
     width: 39px;
     height:41px;
+    cursor: pointer;
+
 }
 
 .main-container {
+    /* background-color: #FFECEC; */
+    height: 950px;
+    /* display: inline-block; */
+}
 
+/* .cta-container {
+    z-index: 1;
+} */
+.hero-section {
+    margin: 0 38px;
+    position: relative;
+    background-color: #FFECEC;
+}
+
+.cta-container {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
 }
 
 .cta-text {
-    font-size: 120px;
+    font-size: 140px;
     font-weight: bold;
     color: #1F2229; 
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
-.hero-section {
-    position: absolute;
-    background-color: #FFECEC;
-}
 .cta-button {
     font-family: "Roboto Mono", monospace;
     color: #ffffff;
@@ -88,8 +105,48 @@ img {
 
 .hero-pizza {
     position: absolute;
-    top: 0px;
     right: 0px;
-    width: 800px;
-    height: 800px;
+    z-index: 1;
+    width: 920px;
+    height: 920px;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    background-color:#FC6051;
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+.copyright-text {
+    position: absolute;
+    left: 30px;
+    font-family: "Roboto Mono", monospace;
+    color: #FFECEC;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.footer-animation {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.pizza-animation {
+    width: 149px;
+    height: 149px;
+}
+
+.animation-button {
+    font-family: "Roboto Mono", monospace;
+    font-size: 32px;
+    font-weight: 300;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FFECEC;
 }
