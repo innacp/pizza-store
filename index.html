@@ -9,74 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="src/ingredients.js"></script>
-    <script defer src="src/app.js"></script>
+    <link rel="stylesheet" href="css/stylesUpdated.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header-container">
+        <header class="header">
             <div class="logo-container">
-                <img class="logo" src="./img/logo.png" alt="pizza-logo">
+                <h2 class="logo-text">Pingo</h2>
+                <img class="logo-image" src="./img/logo.png" alt="pizza-logo">
+                <h2 class="logo-text">Rinjo</h2>
             </div>
-            <h1>Hey, Pizza Lover!</h1>
-            <div class="history-container">
-                <h4>Order Histiry</h4>
+            <div class="nav-icons">
+                <img class="history-icon" src="./img/history-icon.png" alt="">
+                <img class="basket-icon" src="./img/basket-icon.png" alt="">
             </div>
-
         </header>
         <main class="main-container">
-            <div class="order-container">
-                <h3>Your pizza</h3>
-                <img class="base-img" src="./img/base.png" alt="pizza-image">
+            <div class="hero-section">
+                <div class="cta-container">
+                    <h1 class="cta-text">Create<br>your own<br>pizza</h1>
+                    <button class="cta-button">start building</button>
+                </div>
+                <img class="hero-pizza" src="/img/hero-pizza.png" alt="delicious-pizza-image">
             </div>
-            <ul class="ingredients-container">
-                <h3>Ingredients</h3>
-                <li id="1" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="2" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="3" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="4" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="5" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="6" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="7" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-                <li id="8" class="ingredient-box">
-                    <h4 class="ingredient-name"></h4>
-                    <img class="ingredient-img" src="" alt="ingredient-image">
-                    <p class="price"></p>
-                </li>
-
-            </ul>
+            <!-- <div class="menu-container">
+                <div class="base-img-container">
+                    <img class="base-img" src="./img/base.png" alt="pizza-image">
+                </div>
+                <ul id="pizza" class="pizza-container"></ul> -->
+            <!-- <button onclick="saveOrder()">Save Order</button>
+            <h3 class="mid-heading">Ingredients</h3>
+            <ul id="ingredients" class="ingredients-container"></ul> -->
+            <!-- </div> -->
         </main>
     </div>
+    <footer class="footer">
+        <p class="copyright-text">&copy2024 designed & developed by innacp</p>
+        <div class="footer-animation">
+            <img class="pizza-animation" src="./img/animation.png" alt="pizza-cartoon">
+            <button class="animation-button">click me</button>
+        </div>
+    </footer>
+
+    <script defer src="src/ingredients.js"></script>
+    <script defer src="src/app.js"></script>
 </body>
 
 </html>

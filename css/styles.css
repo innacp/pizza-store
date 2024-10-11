@@ -1,0 +1,147 @@
+:root {
+    --color-dark: #dd13fc; 
+    --color-mid: #fdbdff;
+    --color-light: #fde3fd;
+    --color-venom: #00ff03; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+    color: var(--color-dark);
+    flex-basis: 100%;
+    text-align: center;
+   
+}
+.wrapper {
+    padding: 20px 50px;
+    max-width: 1080px;
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-container {
+    /* display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 0; */
+
+    /* display: table; */
+    display: flex;
+    /* align-items: center; */
+    /* flex: wrap; */
+    flex-direction: column;
+    border: 3px solid var(--color-dark);
+}
+
+.ingredients-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 350px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-mid);
+    padding: 20px;
+}
+
+.ingredient-box {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 3px solid var(--color-mid);
+    padding: 10px;
+    background-color: var(--color-dark);
+    box-shadow: 0 0 0 3px var(--color-dark);
+}
+
+.border {
+    border: 3px solid var(--color-dark);    
+}
+
+.mid-heading {
+    color: var(--color-dark);
+    text-align: center;
+    border: 3px solid var(--color-dark);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: var(--color-light);
+}
+
+.logo {
+    width: 80px;
+}
+
+.base-img-container {
+    width: 300px;
+    margin: 0 auto;
+}
+.base-img { 
+    width: 100%;
+}
+
+.ingredient-img {
+    width: 70px;
+    background-color: var(--color-mid);
+    padding: 7px
+    /* border: 3px solid var(--color-mid) */
+}
+
+.ingredient-name {
+    color: var(--color-light);
+}
+
+.pizza-container {
+    list-style: none;
+    min-width: 350px;
+    /* border: 1px solid var(--color-dark) */
+}
+
+button {
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-weight: 600;
+    min-width: 50px;
+    max-width: 50px;
+    padding: 5px;
+}
+
+.menu-container {
+    border: 3px solid var(--color-dark);
+}
+
+.history-heading {
+    color: var(--color-venom);
+    border: 3px solid var(--color-venom);
+    padding: 6px;
+    line-height: 21px;
+}
+
+.price {
+    color: var(--color-light);
+    font-weight: 600;
+}
+
+
+
